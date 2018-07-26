@@ -1,0 +1,70 @@
+<!--
+描述：艺术中心-就业信息-学生应聘
+开发人：hqj
+开发日期：2017年12月18日
+-->
+
+<template lang="pug">
+    keep-alive
+        kalix-table(bizKey="candidate" title='学生应聘信息列表' v-bind:targetURL="targetURL"
+        v-bind:bizDialog="bizDialog" v-bind:tableFields="tableFields"  bizSearch="ArtCandidateSearch" v-bind:btnList="btnList"
+        v-bind:dictDefine="dictDefine" v-bind:isFixedColumn="isFixedColumn")
+</template>
+
+<script type="text/ecmascript-6">
+    import {CandidateURL, ToolButtonList} from '../../config.toml'
+
+    export default {
+        name: 'kalix-art-candidate',
+        data() {
+            return {
+                dictDefine: [{ // 定义数据字典的显示
+                    cacheKey: 'ART-DICT-KEY',
+                    type: '省份',
+                    targetField: 'regionName',
+                    sourceField: 'region'
+                }, {
+                    cacheKey: 'ART-DICT-KEY',
+                    type: '学历',
+                    targetField: 'educationName',
+                    sourceField: 'education'
+                }, {
+                    cacheKey: 'ART-DICT-KEY',
+                    type: '月薪',
+                    targetField: 'salaryName',
+                    sourceField: 'salary'
+                }, {
+                    cacheKey: 'ART-DICT-KEY',
+                    type: '企业行业',
+                    targetField: 'expectingIndustryName',
+                    sourceField: 'expectingIndustry'
+                }],
+                btnList: ToolButtonList,
+                targetURL: CandidateURL,
+                tableFields: [
+                    {prop: 'creationDate', label: '创建时间'},
+                    {prop: 'code', label: '学号'},
+                    {prop: 'name', label: '姓名'},
+                    {prop: 'regionName', label: '工作省份'},
+                    {prop: 'city', label: '工作城市'},
+                    {prop: 'educationName', label: '学历'},
+                    {prop: 'salaryName', label: '薪资'},
+                    {prop: 'expectingIndustryName', label: '期望行业'}
+                ],
+                bizDialog: [
+                    {id: 'view', dialog: 'ArtCandidateView'},
+                    {id: 'edit', dialog: 'ArtCandidateEdit'},
+                    {id: 'add', dialog: 'ArtCandidateAdd'}
+                ],
+                isFixedColumn: true
+            }
+        },
+        created() {
+        },
+        methods: {},
+        components: {}
+    }
+</script>
+
+<style scoped lang="stylus">
+</style>

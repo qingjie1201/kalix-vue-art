@@ -1,0 +1,156 @@
+# 系统管理項目配置文件
+
+ArtDictURL = "/camel/rest/art/dicts"
+ArtDictsTypesListURL = "/camel/rest/art/dicts/types/list"
+
+# 企业招聘
+RecruitURL = "/camel/rest/recruits"
+# 学生应聘
+CandidateURL = "/camel/rest/artcandidates"
+StudentURL = "/camel/rest/students"
+# 企业信息
+EnterpriseURL = "/camel/rest/enterprises"
+# 职能类别
+FunctionCategroyURL = "/camel/rest/functioncategorys"
+MajorCourseURL = "/camel/rest/majorcourses"
+
+# table 的默认按钮定义
+[[ToolButtonList]]
+  id = "view"
+  title = "查看"
+  isShow = true    # 是否显示
+  isPermission = true   # 是否进行权限认证
+[[ToolButtonList]]
+  id = "edit"
+  title = "编辑"
+  isShow = true
+  isPermission = true
+[[ToolButtonList]]
+  id = "delete"
+  title = "删除"
+  isShow = true
+  isPermission = true
+
+# table-enterprise 使用的按钮定义
+[[EnterpriseToolButtonList]]
+  id = "view"
+  title = "查看"
+  isShow = true    # 是否显示
+  isPermission = true   # 是否进行权限认证
+[[EnterpriseToolButtonList]]
+  id = "edit"
+  title = "编辑"
+  isShow = true
+  isPermission = true
+
+# table-score 使用的按钮定义
+[[ScoreToolButtonList]]
+  id = "newEdit"
+  title = "编辑"
+  isShow = true
+  isPermission = true
+[[ScoreToolButtonList]]
+  id = "delete"
+  title = "删除"
+  isShow = true
+  isPermission = true
+
+# table-student 使用的按钮定义
+[[StudentToolButtonList]]
+  id = "view"
+  title = "查看"
+  isShow = true    # 是否显示
+  isPermission = true   # 是否进行权限认证
+[[StudentToolButtonList]]
+  id = "newEdit"
+  title = "编辑"
+  isShow = true
+  isPermission = true
+#[[StudentToolButtonList]]
+#  id = "scoreManage"
+#  title = "成绩管理"
+#  isShow = true
+#  isPermission = true
+
+# 需要自动注册成全局的recruit组件
+[[RecruitComponent]]
+  path = "art/recruit/recruitView"
+  name = "ArtRecruitView"
+[[RecruitComponent]]
+  path = "art/recruit/recruitAdd"
+  name = "ArtRecruitAdd"
+[[RecruitComponent]]
+  path = "art/recruit/recruitEdit"
+  name = "ArtRecruitEdit"
+[[RecruitComponent]]
+  path = "art/recruit/recruitSearch"
+  name = "ArtRecruitSearch"
+
+# 需要自动注册成全局的candidate组件
+[[CandidateComponent]]
+  path = "art/candidate/candidateView"
+  name = "ArtCandidateView"
+[[CandidateComponent]]
+  path = "art/candidate/candidateAdd"
+  name = "ArtCandidateAdd"
+[[CandidateComponent]]
+  path = "art/candidate/candidateEdit"
+  name = "ArtCandidateEdit"
+[[CandidateComponent]]
+  path = "art/candidate/candidateSearch"
+  name = "ArtCandidateSearch"
+
+# 需要自动注册成全局的artEnterprise组件
+[[ArtEnterpriseComponent]]
+  path = "art/company/companyView"
+  name = "ArtCompanyView"
+[[ArtEnterpriseComponent]]
+  path = "art/company/companyAdd"
+  name = "ArtCompanyAdd"
+[[ArtEnterpriseComponent]]
+  path = "art/company/companySearch"
+  name = "ArtCompanySearch"
+
+# 需要自动注册成全局的artStudent组件
+[[ArtStudentComponent]]
+  path = "art/student/studentView"
+  name = "ArtStudentView"
+[[ArtStudentComponent]]
+  path = "art/student/studentAdd"
+  name = "ArtStudentAdd"
+[[ArtStudentComponent]]
+  path = "art/student/studentSearch"
+  name = "ArtStudentSearch"
+[[ArtStudentComponent]]
+  path = "art/score/score"
+  name = "ArtScoreManage"
+
+# 需要自动注册成全局的majorCourse组件
+[[MajorCourseComponent]]
+  path = "art/majorcourse/majorCourseView"
+  name = "MajorCourseView"
+[[MajorCourseComponent]]
+  path = "art/majorcourse/majorCourseAdd"
+  name = "MajorCourseAdd"
+[[MajorCourseComponent]]
+  path = "art/majorcourse/majorCourseSearch"
+  name = "MajorCourseSearch"
+
+# 需要自动注册成全局的functioncategory组件
+[[FunctionCategoryComponent]]
+  path = "art/functioncategory/functioncategoryView"
+  name = "FunctionCategoryView"
+[[FunctionCategoryComponent]]
+  path = "art/functioncategory/functioncategoryAdd"
+  name = "FunctionCategoryAdd"
+[[FunctionCategoryComponent]]
+  path = "art/functioncategory/functioncategorySearch"
+  name = "FunctionCategorySearch"
+
+# 需要自动注册成全局的score组件
+[[ArtScoreComponent]]
+  path = "art/score/scoreAdd"
+  name = "ArtScoreAdd"
+[[ArtScoreComponent]]
+  path = "art/score/scoreSearch"
+  name = "ArtScoreSearch"
